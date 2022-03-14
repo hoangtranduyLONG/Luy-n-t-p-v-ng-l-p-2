@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="ip">Nhập số: </label>
+<input id="ip" type="text" oninput="tinh()">
+<p id="result">Giai thừa: </p>
+<script>
+    let ip = document.getElementById("ip");
+    let result = document.getElementById("result");
+    function tinh() {
+        let gt = 1;
+        if (+ip.value <= 0) {
+            result.innerText = "Hãy nhập số nguyên dương";
+        }
+        else {
+            for (let i = 1; i <= +ip.value; i++) {
+                gt *= i;
+            }
+            result.innerText = "Giai thừa: " + gt;
+        }
+    }
+</script>
+</body>
+</html>
